@@ -4,7 +4,10 @@
   "repository": "lamda_authorizer",
   "version": "1.0.2",
   "dependencies": {
-    "winston": "^2.2.0"
+    "jsonwebtoken": "^8.4.0",
+    "jwk-to-pem": "^2.0.1",
+    "request": "^2.88.0",
+    "winston": "^2.4.4"
   },
   "devDependencies": {
     "mocha": "^5.1.0",
@@ -23,8 +26,7 @@
   "scripts": {
     "lint": "eslint *.js lib/** test/**",
     "test": "mocha test --recursive",
-    "build": "sh build.sh ${npm_package_version}",
-    "prebuild": "npm run test && npm run lint"
+    "build": "sh build.sh ${npm_package_version}"
   },
   "author": "Expanse, LLC",
   "license": "Apache-2.0"
